@@ -186,7 +186,7 @@ def main():
                 args.input[i] += '.xml'
             elif os.path.splitext(args.input[i])[1] == '.csv' or args.eda_tool[i] == 'csv' or args.eda_tool[i] == 'generic':
                 args.eda_tool = 'generic_csv'
-            args.input[i] = open(args.input[i])
+            args.input[i] = open(args.input[i], encoding='utf-8')
 
     # Set number of processes to use for web scraping.
     if args.serial:
