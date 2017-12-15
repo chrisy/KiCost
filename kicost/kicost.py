@@ -1226,7 +1226,7 @@ def get_part_html_tree(part, dist, get_html_tree_func, local_part_html, scrape_r
             pass
         except AttributeError:
             break
-    logger.warning("Part %s not found at %s", part.refs, dist)
+    logger.debug("Part %s not found at %s", part.refs, dist)
     # If no HTML page was found, then return a tree for an empty page.
     return BeautifulSoup('<html></html>', 'lxml'), ''
 
